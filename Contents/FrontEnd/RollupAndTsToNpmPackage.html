@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rollup + Typescript =&gt; NPM Package | 人间熙攘，好久不见</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <script charset="utf-8" crossorigin="anonymous" src="/js/rainyday.js"></script>
+    <meta name="description" content="人间熙攘，好久不见~ Magic 的博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.fe1de732.css" as="style"><link rel="preload" href="/assets/js/app.9c25eb3f.js" as="script"><link rel="preload" href="/assets/js/3.3a0059ea.js" as="script"><link rel="preload" href="/assets/js/1.f59e6aa8.js" as="script"><link rel="preload" href="/assets/js/15.d5344a36.js" as="script"><link rel="prefetch" href="/assets/js/10.9404ccea.js"><link rel="prefetch" href="/assets/js/11.523551ba.js"><link rel="prefetch" href="/assets/js/12.fa75abed.js"><link rel="prefetch" href="/assets/js/13.ac43c54a.js"><link rel="prefetch" href="/assets/js/14.0e0b7fa3.js"><link rel="prefetch" href="/assets/js/16.211dc726.js"><link rel="prefetch" href="/assets/js/17.e03e8f65.js"><link rel="prefetch" href="/assets/js/4.bf4521b6.js"><link rel="prefetch" href="/assets/js/5.62341054.js"><link rel="prefetch" href="/assets/js/6.bb52eff2.js"><link rel="prefetch" href="/assets/js/7.231c435c.js"><link rel="prefetch" href="/assets/js/8.f18fde34.js"><link rel="prefetch" href="/assets/js/9.395c0282.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.fe1de732.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>人间熙攘，好久不见</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Magic</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo/nav.png" alt="人间熙攘，好久不见" class="logo"> <span class="site-name">人间熙攘，好久不见</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Front-end/" class="nav-link"><i class="iconfont undefined"></i>
+  Front-end
+</a></li><li class="dropdown-item"><!----> <a href="/categories/版本控制-Git/" class="nav-link"><i class="iconfont undefined"></i>
+  版本控制-Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Rust/" class="nav-link"><i class="iconfont undefined"></i>
+  Rust
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      GitHub
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/magicLaLa/Magic.me" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/magicLaLa/blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Before
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><img src="/logo/avatar2.gif" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    Magic
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>7</h3> <h6 data-v-ca798c94>文章</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>6</h3> <h6 data-v-ca798c94>标签</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Front-end/" class="nav-link"><i class="iconfont undefined"></i>
+  Front-end
+</a></li><li class="dropdown-item"><!----> <a href="/categories/版本控制-Git/" class="nav-link"><i class="iconfont undefined"></i>
+  版本控制-Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Rust/" class="nav-link"><i class="iconfont undefined"></i>
+  Rust
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      GitHub
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/magicLaLa/Magic.me" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/magicLaLa/blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Before
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>Rollup + Typescript =&gt; NPM Package</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Magic</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2021
+        </a></span></div></div> <div data-v-2d5f533b><main class="page"><div class="page-title" style="display:none;"><h1 class="title">Rollup + Typescript =&gt; NPM Package</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>Magic</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2021-06-28</span></i> <i class="iconfont reco-eye" data-v-3b7f5bdf><span id="/Contents/FrontEnd/RollupAndTsToNpmPackage.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-3b7f5bdf><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>Front-end</span><span class="tag-item" data-v-3b7f5bdf>Npm</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><div class="abstract-box"><p><span>使用 Rollup + Typescript 来创建一个 npm 包</span></p> <p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-ts.jpeg" alt="rollup-ts"></p></div> <h2 id="项目结构"><a href="#项目结构" class="header-anchor">#</a> 项目结构</h2> <p>项目地址：<a href="https://github.com/magicLaLa/ClipboardCopy" target="_blank" rel="noopener noreferrer">地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language- extra-class"><pre class="language-text"><code>.
+├── CHANGELOG.md
+├── LICENSE
+├── README.md
+├── commitlint.config.js
+├── docs
+│   ├── classes
+│   └── modules.md
+├── jest.config.js
+├── lib
+│   ├── index.cjs.js
+│   └── index.esm.js
+├── node_modules
+├── package.json
+├── rollup.config.js
+├── src
+│   ├── __tests__
+│   └── index.ts
+├── tsconfig.json
+├── types
+│   └── index.d.ts
+└── yarn.lock
+</code></pre></div><p>查看命令可以通过 <code>tree -L 2</code> 来查看...</p> <h2 id="开始动手"><a href="#开始动手" class="header-anchor">#</a> 开始动手</h2> <h3 id="初始化-npm"><a href="#初始化-npm" class="header-anchor">#</a> 初始化 npm</h3> <p>快速初始化项目 <code>npm init</code>，选项根据提示进行填</p> <h3 id="创建-nvmrc"><a href="#创建-nvmrc" class="header-anchor">#</a> 创建 .nvmrc</h3> <div class="language- extra-class"><pre class="language-text"><code>v14.17.1
+</code></pre></div><p>可以在 .zshrc 增加如下代码：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#  根据当前目录是否存在 nvmrc 启用对应 node 版本</span>
+<span class="token function-name function">load_nvmrc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> -f .nvmrc <span class="token operator">&amp;&amp;</span> -r .nvmrc <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+		nvm use
+	<span class="token keyword">fi</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>因为 <code>rollup-plugin-dts</code>  需要 node 大于 v12.22.1</p> <h3 id="安装-rollup、-rollup-plugin-typescript、rollup-plugin-dts"><a href="#安装-rollup、-rollup-plugin-typescript、rollup-plugin-dts" class="header-anchor">#</a> 安装 rollup、@rollup/plugin-typescript、rollup-plugin-dts</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> rollup @rollup/plugin-typescript rollup-plugin-dts -D
+</code></pre></div><p>这里我们使用 <code>yarn</code> 来进行<a href="https://classic.yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison" target="_blank" rel="noopener noreferrer">yarn 和 npm 的差异<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，<code>-D</code> 表示只在开发环境中使用，</p> <ul><li><code>rollup</code>: <a href="https://rollupjs.org/guide/en/" target="_blank" rel="noopener noreferrer">Rollup<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 是一个 JavaScript 模块打包器；</li> <li><code>@rollup/plugin-typescript</code>: <a href="https://github.com/rollup/plugins/tree/master/packages/typescript" target="_blank" rel="noopener noreferrer">rollup 支持 ts 的插件<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，之前是用 <code>rollup-plugin-typescript</code>，现在已经废弃了，改用 <code>@rollup/plugin-typescript</code> 这个了；</li> <li><code>rollup-plugin-dts</code>：生成 d.ts 文件；</li></ul> <h3 id="安装-eslint-来约束代码风格"><a href="#安装-eslint-来约束代码风格" class="header-anchor">#</a> 安装 Eslint 来约束代码风格</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
+<span class="token function">yarn</span> <span class="token function">add</span> eslint-config-airbnb-typescript eslint-config-prettier eslint-plugin-import -D
+</code></pre></div><p>五个依赖分别是：</p> <ul><li><code>eslint</code>：ESLint的核心代码;</li> <li><code>@typescript-eslint/parser</code>：ESLint的解析器，用于解析typescript，从而检查和规范Typescript代码;</li> <li><code>@typescript-eslint/eslint-plugin</code>：这是一个ESLint插件，包含了各类定义好的检测Typescript代码的规范;</li> <li><code>eslint-config-airbnb-typescript</code>：代码规范，使 airbnb 规则适用于 ts;</li> <li><code>eslint-config-prettier</code>：将会禁用掉所有那些非必须或者和prettier冲突的规则；</li> <li><code>eslint-plugin-import</code>：用来支持 es5/es6+ 的 import/export 语法；</li></ul> <p>更多参考自：<a href="https://juejin.cn/post/6844903859488292871" target="_blank" rel="noopener noreferrer">最全的Eslint配置模板，从此统一团队的编程习惯<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>;</p> <ul><li>创建 <code>.eslintignore</code> 忽略文件，内容如下：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>*.js
+<span class="token comment"># don't ever lint node_modules</span>
+node_modules
+<span class="token comment"># don't lint build output (make sure it's set to your correct build folder name)</span>
+dist
+es
+lib
+types
+<span class="token comment"># don't lint nyc coverage output https://eslint.org/docs/developer-guide/development-environment</span>
+coverage
+</code></pre></div><ul><li>创建 <code>.eslintrc.js</code> 配置文件，内容如下：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  root<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  parser<span class="token operator">:</span> <span class="token string">'@typescript-eslint/parser'</span><span class="token punctuation">,</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'@typescript-eslint'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'airbnb-typescript/base'</span><span class="token punctuation">,</span>
+    <span class="token string">'prettier'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 'prettier/@typescript-eslint': 已移除：https://github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md#version-800-2021-02-21</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  parserOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+    project<span class="token operator">:</span> <span class="token string">'./tsconfig.json'</span><span class="token punctuation">,</span> <span class="token comment">// TODO: 后续会创建</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>创建 <code>tsconfig.json</code> 配置，内容如下</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;esModuleInterop&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ES5&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;importHelpers&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>修改 <code>package.json</code>，增加如下代码：</li></ul> <div class="language-json extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><br><br><br></div><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rollup -c -w&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;lint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eslint src --ext .ts&quot;</span><span class="token punctuation">,</span> <span class="token comment">// --ext 检查指定代码块的文件扩展名</span>
+  <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yarn jest --detectOpenHandles --forceExit&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>运行 <code>yanr lint</code>：输出如下:</p> <p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-lint.png" alt="rollup-lint"></p> <h3 id="安装-typescript"><a href="#安装-typescript" class="header-anchor">#</a> 安装 Typescript</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> typescript -D
+</code></pre></div><h3 id="创建-rollup-config-js"><a href="#创建-rollup-config-js" class="header-anchor">#</a> 创建 rollup.config.js</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> typescript <span class="token keyword">from</span> <span class="token string">'@rollup/plugin-typescript'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> dts <span class="token keyword">from</span> <span class="token string">'rollup-plugin-dts'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    input<span class="token operator">:</span> <span class="token string">'src/index.ts'</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> format<span class="token operator">:</span> <span class="token string">'cjs'</span><span class="token punctuation">,</span> file<span class="token operator">:</span> <span class="token string">'lib/index.cjs.js'</span><span class="token punctuation">,</span> exports<span class="token operator">:</span> <span class="token string">'named'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> format<span class="token operator">:</span> <span class="token string">'es'</span><span class="token punctuation">,</span> file<span class="token operator">:</span> <span class="token string">'lib/index.esm.js'</span><span class="token punctuation">,</span> exports<span class="token operator">:</span> <span class="token string">'named'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token function">typescript</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        exclude<span class="token operator">:</span> <span class="token string">&quot;**/__tests__/**&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    input<span class="token operator">:</span> <span class="token string">'src/index.ts'</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> dir<span class="token operator">:</span> <span class="token string">'types'</span><span class="token punctuation">,</span> format<span class="token operator">:</span> <span class="token string">'es'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token function">dts</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="修改-package-json-文件"><a href="#修改-package-json-文件" class="header-anchor">#</a> 修改 package.json 文件</h3> <div class="language-json extra-class"><div class="highlight-lines"><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><br></div><pre class="language-json"><code><span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;A simple clipboardcopy&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rollup -c -w&quot;</span><span class="token punctuation">,</span> <span class="token comment">// https://rollupjs.org/guide/en/#command-line-flags</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token property">&quot;repository&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  ...
+<span class="token punctuation">}</span>
+</code></pre></div><p>运行 <code>yarn dev</code>：</p> <p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-out.png" alt="rollup-out"></p> <p>需要修改 <code>tsconfig.json</code>，增加如下内容:</p> <div class="language-json extra-class"><div class="highlight-lines"><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br></div><pre class="language-json"><code><span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ES5&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;lib&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token string">&quot;ES2015&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;DOM&quot;</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token property">&quot;importHelpers&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre></div><p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-out2.png" alt="rollup-out2"></p> <h3 id="安装-jest-测试框架"><a href="#安装-jest-测试框架" class="header-anchor">#</a> 安装 jest 测试框架</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> jest ts-jest @types/jest -D
+
+<span class="token comment"># 初始化配置文件</span>
+<span class="token function">yarn</span> ts-jest config:init
+</code></pre></div><p><code>ts-jest @types/jest</code> 是用来支持 ts 的，具体详见：<a href="https://github.com/kulshekhar/ts-jest" target="_blank" rel="noopener noreferrer">ts-jest<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>;</p> <ul><li><code>jest.config.js</code>: 配置内容如下：<a href="https://jestjs.io/zh-Hans/docs/configuration#modulenamemapper-objectstring-string--arraystring" target="_blank" rel="noopener noreferrer">configuration<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  preset<span class="token operator">:</span> <span class="token string">'ts-jest'</span><span class="token punctuation">,</span>
+  testEnvironment<span class="token operator">:</span> <span class="token string">'jsdom'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>增加 测试 命令</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token comment">// package.json</span>
+<span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;A simple clipboardcopy&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rollup -c -w&quot;</span><span class="token punctuation">,</span> <span class="token comment">// https://rollupjs.org/guide/en/#command-line-flags</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yarn jest --detectOpenHandles --forceExit&quot;</span> <span class="token comment">// https://jestjs.io/zh-Hans/docs/cli#--detectopenhandles</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token property">&quot;repository&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  ...
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>增加测试文件</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// copy.test.ts</span>
+<span class="token comment">/**
+ * @jest-environment jsdom
+ */</span>
+<span class="token keyword">import</span> ClipboardCopy <span class="token keyword">from</span> <span class="token string">'../index'</span><span class="token punctuation">;</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'ClipboardCopy is reject'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ClipboardCopy</span><span class="token punctuation">(</span><span class="token string">'tests'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">copy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span>rejects<span class="token punctuation">.</span><span class="token function">toThrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>运行后显示如下：</p> <p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-test.png" alt="rollup-test"></p> <p>因为 jsdom 不能完全支持 浏览器功能，所以确定它是失败的；</p> <details class="custom-block details"><summary>See More</summary> <p><strong>以下内容运行不通过，后续更新</strong></p> <ul><li>安装 jest-puppeteer 和 puppeteer，用来模拟在 浏览器环境</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> jest-puppeteer puppeteer @types/puppeteer -D
+<span class="token comment"># TypeScript</span>
+<span class="token function">yarn</span> <span class="token function">add</span> @types/puppeteer @types/jest-environment-puppeteer @types/expect-puppeteer -D
+</code></pre></div><p>需要把 jest.config.js 中 <code>testEnvironment</code> 改为 node，因为 puppeteer 是基于 node 来运行的，然后把 <code>@jest-environment jsdom</code> 删掉。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// jest.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  preset<span class="token operator">:</span> <span class="token string">'jest-puppeteer'</span><span class="token punctuation">,</span>
+  testEnvironment<span class="token operator">:</span> <span class="token string">'node'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>可以增加 jest-puppeteer.config.js 来配置 jest-puppeteer</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  launch<span class="token operator">:</span> <span class="token punctuation">{</span>
+    headless<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    ignoreHTTPSErrors<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  browser<span class="token operator">:</span> <span class="token string">'chromium'</span><span class="token punctuation">,</span>
+  browserContext<span class="token operator">:</span> <span class="token string">'default'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>在 jest.config.js 配置一下内容支持 es6 语法</li></ul> <div class="language-js extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br></div><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  preset<span class="token operator">:</span> <span class="token string">'jest-puppeteer'</span><span class="token punctuation">,</span>
+  transform<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token string">&quot;\\.ts$&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'ts-jest'</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  globals<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'ts-jest'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;tsconfig&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tsconfig.test.json&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-json extra-class"><pre class="language-json"><code><span class="token comment">// tsconfig.test.json</span>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;extends&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./tsconfig.json&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// &quot;compilerOptions&quot;: {</span>
+  <span class="token comment">//   &quot;moduleResolution&quot;: &quot;Node&quot;</span>
+  <span class="token comment">// }</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>发现运行不通过，应该是 ts 和 es6 类 的原因导致的。。。</p> <p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-test2.png" alt="rollup-test2"></p></details> <h3 id="安装-rimraf"><a href="#安装-rimraf" class="header-anchor">#</a> 安装 rimraf</h3> <p>用来删除文件</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> rimraf -D
+</code></pre></div><div class="language-json extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><br><br><br><br></div><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rollup -c -w&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;clean&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rimraf lib types&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;lint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eslint src --ext .ts&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yarn jest --detectOpenHandles --forceExit&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>运行 <code>yarn clean</code>，会看到 lib、types 文件夹删除</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> clean
+<span class="token comment"># yarn run v1.22.5</span>
+<span class="token comment"># $ rimraf es lib types</span>
+<span class="token comment"># ✨  Done in 0.32s.</span>
+</code></pre></div><h3 id="增加命令-build-命令"><a href="#增加命令-build-命令" class="header-anchor">#</a> 增加命令 build 命令</h3> <div class="language-json extra-class"><div class="highlight-lines"><br><br><br><br><br><div class="highlighted"> </div><br><br></div><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rollup -c -w&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;clean&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rimraf lib types&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;lint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eslint src --ext .ts&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yarn jest --detectOpenHandles --forceExit&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yarn clean &amp;&amp; yarn lint &amp;&amp; yarn test &amp;&amp; rollup -c&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>运行 <code>yanr build</code> 效果如下：</p> <p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-build.png" alt="rollup-build"></p> <h3 id="安装-typedoc-创建-文档"><a href="#安装-typedoc-创建-文档" class="header-anchor">#</a> 安装 typedoc 创建 文档</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> typedoc typedoc-plugin-markdown -D
+</code></pre></div><ul><li>配置命令</li></ul> <div class="language-json extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br></div><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    ...
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yarn jest  --detectOpenHandles --forceExit&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;doc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;typedoc --excludeNotDocumented --plugin typedoc-plugin-markdown --out ./docs/ src/index.ts&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yarn clean &amp;&amp; yarn lint &amp;&amp; yarn test &amp;&amp; rollup -c &quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>运行 <code>yanr doc</code>，输出如下：</p> <p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-doc.png" alt="rollup-doc"></p> <p>更多 <code>typedoc</code> 配置：<a href="https://typedoc.org/api/" target="_blank" rel="noopener noreferrer">TypeDoc Documentation<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="修改-package-json"><a href="#修改-package-json" class="header-anchor">#</a> 修改 package.json</h3> <div class="language-json extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><br><br><br><br></div><pre class="language-json"><code><span class="token punctuation">{</span>
+  ...<span class="token punctuation">,</span>
+  <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lib/math.cjs.js&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 定义了 npm 包的入口文件，browser 环境和 node 环境均可使用</span>
+  <span class="token property">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lib/math.esm.js&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 定义 npm 包的 ESM 规范的入口文件，browser 环境和 node 环境均可使用</span>
+  <span class="token property">&quot;typings&quot;</span><span class="token operator">:</span> <span class="token string">&quot;types/index.d.ts&quot;</span><span class="token punctuation">,</span> <span class="token comment">// ts 声明文件</span>
+  ...
+   <span class="token property">&quot;publishConfig&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 发布配置</span>
+    <span class="token property">&quot;registry&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://registry.npmjs.org/&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  ...
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>如果本机第一次发布包：(非第一次可忽略) 使用 <code>npm adduser</code>，根据提示输入账户、密码、邮箱。注：如果当前是 淘宝源 需要切换</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 淘宝源</span>
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry http://registry.npm.taobao.org/
+<span class="token comment"># 官方源</span>
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npmjs.org/
+
+<span class="token function">npm</span> adduser
+
+<span class="token comment"># Username: xxxxxxx</span>
+<span class="token comment"># Password:</span>
+<span class="token comment"># Email: (this IS public) xxxxxxxxx.com</span>
+<span class="token comment"># Logged in as xxxxxx on https://registry.npmjs.org/.</span>
+</code></pre></div><ul><li>非第一次发布包 再次使用 <code>npm login</code> 步骤跟上面一样。</li> <li>执行 <code>npm publish</code> 发布，首次发布执行 <code>npm publish --access=public</code>，如果想要撤回执行 <code>npm unpublish</code>，不过推荐使用 <code>npm deprecate &lt;pkg&gt;[@&lt;version&gt;] &lt;message&gt;</code>，这样别人在安装你的包时会得到提示。</li></ul> <h3 id="安装一下-发布的包"><a href="#安装一下-发布的包" class="header-anchor">#</a> 安装一下 发布的包</h3> <p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-yarn.png" alt="rollup-yarn"></p> <p>可以看到安装成功了，但是有许多多余的包被发布了上去，可以修改一下：</p> <ul><li>增加 .npmignore 来忽略需要上传的文件</li></ul> <div class="language- extra-class"><pre class="language-text"><code>tsconfig.json
+rollup.config.js
+jest.config.js
+docs/
+.nvmrc
+.eslintrc.js
+.eslintignore
+src/__tests__
+</code></pre></div><p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-package.png" alt="rollup-package"></p> <p>可以看到 少了很多文件，nice～</p> <h3 id="增加自动生成-changelog"><a href="#增加自动生成-changelog" class="header-anchor">#</a> 增加自动生成 Changelog</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> conventional-changelog-cli husky -D
+</code></pre></div><ul><li><p><code>conventional-changelog-cli</code>：<a href="https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli#readme" target="_blank" rel="noopener noreferrer">生成 commit Changelog记录<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p><code>husky</code>：<a href="https://github.com/typicode/husky" target="_blank" rel="noopener noreferrer">git hooks<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，注：最新的 6.0 版本修改了 husky 的执行方式，具体查看：<a href="https://zhuanlan.zhihu.com/p/366786798" target="_blank" rel="noopener noreferrer">husky使用总结<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p>用来检测 commit 信息规范</p></li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> @commitlint/cli @commitlint/config-conventional -D
+</code></pre></div><ul><li>增加 commitlint.config.js 配置检测文件，内容如下:</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'@commitlint/config-conventional'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>修改 package.json</p> <div class="language-json extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br></div><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">&quot;prepare&quot;</span><span class="token operator">:</span> <span class="token string">&quot;husky install&quot;</span><span class="token punctuation">,</span>
+  ...
+  <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;conventional-changelog -p angular -i CHANGELOG.md -s &amp;&amp; git add CHANGELOG.md&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>这样每次运行 version 的时候可以修改版本号并自动生成 CHANGELOG，注：运行 <code>yarn version</code> 的时候需要保证仓库是干净的，也就是没有 <strong>未提交</strong> 的修改。</p> <ul><li>增加 husky: <a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="noopener noreferrer">hooks<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 钩子：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># https://typicode.github.io/husky/#/?id=husky_git_params-ie-commitlint-</span>
+<span class="token function">yarn</span> husky <span class="token function">add</span> .husky/commit-msg <span class="token string">&quot;yarn commitlint --edit <span class="token variable">$1</span>&quot;</span>
+</code></pre></div><p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-commitlint.png" alt="rollup-commitlint"></p> <h3 id="增加-github-actions"><a href="#增加-github-actions" class="header-anchor">#</a> 增加 Github Actions</h3> <ul><li>npm token 获取：<a href="https://docs.npmjs.com/creating-and-viewing-access-tokens" target="_blank" rel="noopener noreferrer">creating-and-viewing-access-tokens<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>配置 NODE_AUTH_TOKEN：<a href="https://docs.github.com/cn/actions/reference/encrypted-secrets" target="_blank" rel="noopener noreferrer">文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <ul><li>在 GitHub 上，导航到仓库的主页面。</li> <li>在仓库名称下，单击 Settings（设置）。</li> <li>在左侧边栏中，单击 Secrets（密码）。</li> <li>在 &quot;Name&quot;（名称）输入框中输入密码的名称。</li> <li>输入密码的值。</li> <li>单击 Add secret（添加密码）。</li></ul></li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># .github/workflows/publish.yml</span>
+<span class="token key atrule">name</span><span class="token punctuation">:</span> publish
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">tags</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'v*'</span>  <span class="token comment"># 这段的意思是仅在出现名为 v 字符开头的tag时，触发此任务，如v1.2.1</span>
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">publish</span><span class="token punctuation">:</span>
+    <span class="token comment"># needs: test</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout 🛎️
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Setup<span class="token punctuation">-</span>node
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token string">'14.x'</span>
+          <span class="token key atrule">registry-url</span><span class="token punctuation">:</span> <span class="token string">'https://registry.npmjs.org'</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install and Build 🔧
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          npm install yarn
+          yarn
+          yarn build</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy 🚀
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> npm publish
+        <span class="token key atrule">env</span><span class="token punctuation">:</span>
+          <span class="token key atrule">NODE_AUTH_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.NPM_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token key atrule">github-release</span><span class="token punctuation">:</span> <span class="token comment"># 设置自动生成Github Release</span>
+    <span class="token key atrule">needs</span><span class="token punctuation">:</span> publish
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span>  Checkout 🛎️
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span>
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v1
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token string">'14.x'</span>
+          <span class="token key atrule">registry-url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//registry.npmjs.org/
+      <span class="token punctuation">-</span> <span class="token key atrule">run</span><span class="token punctuation">:</span> npm install yarn
+      <span class="token punctuation">-</span> <span class="token key atrule">run</span><span class="token punctuation">:</span> npm i <span class="token punctuation">-</span>g github<span class="token punctuation">-</span>release<span class="token punctuation">-</span>from<span class="token punctuation">-</span>changelog
+      <span class="token punctuation">-</span> <span class="token key atrule">run</span><span class="token punctuation">:</span> github<span class="token punctuation">-</span>release<span class="token punctuation">-</span>from<span class="token punctuation">-</span>changelog
+        <span class="token key atrule">env</span><span class="token punctuation">:</span>
+          <span class="token key atrule">GITHUB_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token comment"># 过程中会用到名为GITHUB_TOKEN的密钥，用于访问Github相关的API，不过这个私钥是Github Actions默认提供的，不需要额外设置。</span>
+</code></pre></div><p>注：<code>git push origin :refs/tags/xxxxx</code> 删除远程仓库 tag</p> <p>这样每次进行 <code>git push origin --tags</code> 或者 推送某一次 <code>git push origin vxx.xx.xx</code> 到远程时会触发 Github Actions：</p> <p><img src="/Abstract/rollupAndTsToNpmPackage/rollup-gitactions.png" alt="rollup-gitactions"></p> <p>就会自动提交到 npm 仓库 并且 自动生成 Releases。</p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 人间熙攘，好久不见
+    </div> <div class="operation" style="right:90px;bottom:40px;display:none;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:none;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><canvas id="vuepress-canvas-cursor"></canvas><canvas id="vuepress-canvas-ribbon"></canvas></div></div>
+    <script src="/assets/js/app.9c25eb3f.js" defer></script><script src="/assets/js/3.3a0059ea.js" defer></script><script src="/assets/js/1.f59e6aa8.js" defer></script><script src="/assets/js/15.d5344a36.js" defer></script>
+  </body>
+</html>
