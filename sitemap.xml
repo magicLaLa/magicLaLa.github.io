@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://magiclala.github.io/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/tools/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/Zsh/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/iTerm2/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/Front-end/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-Git/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/Rust/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/skia-safe/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%AF%B9%E6%8E%A5/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/Powershell/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/python/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/categories/wsl2/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/tag/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/timeline/</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/DailyTrivia/%E7%94%B5%E4%BF%A1%E8%AE%BE%E7%BD%AE%E6%A1%A5%E6%8E%A5.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/DailyTrivia/zshOptimize.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/Rust/CustomFeatures.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/Rust/SkiaRust.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/Win/Python.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/DailyTrivia/brew.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/Win/EnvSetup.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/Win/Wsl2.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/ThirdPartyDocking/Weibo.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/Git/GitBranch.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/FrontEnd/RollupAndTsToNpmPackage.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/FrontEnd/DebounceAndthrottling.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/FrontEnd/ChromeExtensions.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/FrontEnd/Performance.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/Git/GitProxy.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/Git/GitCommitEmoji.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/Git/GitSummary.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://magiclala.github.io/Contents/Rust/GetStarted.html</loc>
+  <lastmod>2022-05-08T01:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
